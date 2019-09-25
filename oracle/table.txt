@@ -1,0 +1,25 @@
+alter table usertableforcar
+drop primary key;
+
+alter table cartable
+drop primary key;
+
+drop table usertableforcar;
+drop table cartable;
+
+
+create table cartable
+( carnumber varchar2(30),
+  carbrand varchar2(30) not null,
+  cartype varchar2(20) not null,
+  carcolor varchar2(20) not null,
+  carautoorhand varchar2(20) not null,
+  carrent number not null,
+  constraint pk_carnumber primary key (carnumber));
+
+
+create table usertableforcar
+( username varchar2(20),
+  password varchar2(20) not null,
+  email    varchar2(30) not null,
+  constraint pk_username primary key (username));
